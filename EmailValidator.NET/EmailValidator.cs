@@ -75,11 +75,11 @@ namespace EmailValidator.NET
             {
                 try
                 {
-                    SmptClient smptClient = new SmptClient(mxRecord.ExchangeDomainName.ToString());
+                    SmtpClient smtpClient = new SmtpClient(mxRecord.ExchangeDomainName.ToString());
 
                     SmtpStatusCode resultCode;
 
-                    if (smptClient.CheckMailboxExists(email, out resultCode))
+                    if (smtpClient.CheckMailboxExists(email, out resultCode))
                     {
                         switch (resultCode)
                         {

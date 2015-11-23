@@ -7,7 +7,7 @@ using System.Text;
 
 namespace EmailValidator.NET
 {
-    internal class SmptClient
+    internal class SmtpClient
     {
         private struct SmtpResponse
         {
@@ -15,10 +15,10 @@ namespace EmailValidator.NET
             public SmtpStatusCode Code { get; set; }
         }
 
-        private string host;
-        private int port;
+        private readonly string host;
+        private readonly int port;
 
-        public SmptClient(string host, int port = 25)
+        public SmtpClient(string host, int port = 25)
         {
             this.host = host;
             this.port = port;

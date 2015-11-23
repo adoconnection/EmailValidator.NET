@@ -52,7 +52,7 @@
     <Compile Include="EmailValidator.cs" />
     <Compile Include="EmailValidatorException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SmptClient.cs" />
+    <Compile Include="SmtpClient.cs" />
     <Compile Include="SmtpClientException.cs" />
   </ItemGroup>
   <ItemGroup>
