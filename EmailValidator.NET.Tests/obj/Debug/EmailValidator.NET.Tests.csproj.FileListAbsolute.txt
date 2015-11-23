@@ -1,0 +1,13 @@
+h:\EmailValidator.NET\EmailValidator.NET.Tests\bin\Debug\EmailValidator.NET.Tests.dll
+h:\EmailValidator.NET\EmailValidator.NET.Tests\bin\Debug\EmailValidator.NET.Tests.pdb
+h:\EmailValidator.NET\EmailValidator.NET.Tests\bin\Debug\EmailValidator.NET.dll
+h:\EmailValidator.NET\EmailValidator.NET.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+h:\EmailValidator.NET\EmailValidator.NET.Tests\bin\Debug\ARSoft.Tools.Net.dll
+h:\EmailValidator.NET\EmailValidator.NET.Tests\bin\Debug\EmailValidator.NET.pdb
+h:\EmailValidator.NET\EmailValidator.NET.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+h:\EmailValidator.NET\EmailValidator.NET.Tests\bin\Debug\ARSoft.Tools.Net.xml
+h:\EmailValidator.NET\EmailValidator.NET.Tests\obj\Debug\EmailValidator.NET.Tests.csprojResolveAssemblyReference.cache
+h:\EmailValidator.NET\EmailValidator.NET.Tests\obj\Debug\EmailValidator.NET.Tests.dll
+h:\EmailValidator.NET\EmailValidator.NET.Tests\obj\Debug\EmailValidator.NET.Tests.pdb
+h:\EmailValidator.NET\EmailValidator.NET.Tests\bin\Debug\BouncyCastle.Crypto.dll
+h:\EmailValidator.NET\EmailValidator.NET.Tests\bin\Debug\BouncyCastle.Crypto.pdb

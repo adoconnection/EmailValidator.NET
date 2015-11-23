@@ -1,0 +1,8 @@
+h:\EmailValidator.NET\EmailValidator.NET\bin\Debug\EmailValidator.NET.dll
+h:\EmailValidator.NET\EmailValidator.NET\bin\Debug\EmailValidator.NET.pdb
+h:\EmailValidator.NET\EmailValidator.NET\bin\Debug\ARSoft.Tools.Net.dll
+h:\EmailValidator.NET\EmailValidator.NET\bin\Debug\ARSoft.Tools.Net.xml
+h:\EmailValidator.NET\EmailValidator.NET\obj\Debug\EmailValidator.NET.dll
+h:\EmailValidator.NET\EmailValidator.NET\obj\Debug\EmailValidator.NET.pdb
+h:\EmailValidator.NET\EmailValidator.NET\bin\Debug\BouncyCastle.Crypto.dll
+h:\EmailValidator.NET\EmailValidator.NET\bin\Debug\BouncyCastle.Crypto.pdb
