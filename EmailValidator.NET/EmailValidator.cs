@@ -17,12 +17,11 @@ namespace EmailValidator.NET
         /// 
         /// </summary>
         /// <param name="email"></param>
+        /// <param name="result"></param>
         /// <returns></returns>
         /// <exception cref="EmailValidatorException"></exception>
         public bool Validate(string email, out EmailValidationResult result)
         {
-            MailAddress mailAddress = null;
-
             if (string.IsNullOrWhiteSpace(email))
             {
                 result = EmailValidationResult.AddressIsEmpty;
@@ -30,6 +29,8 @@ namespace EmailValidator.NET
             }
 
             email = email.Trim();
+
+            MailAddress mailAddress = null;
 
             try
             {
@@ -70,13 +71,11 @@ namespace EmailValidator.NET
                 return true;
             }
 
-
             foreach (MxRecord mxRecord in mxRecords)
             {
                 try
                 {
                     SmtpClient smtpClient = new SmtpClient(mxRecord.ExchangeDomainName.ToString());
-
                     SmtpStatusCode resultCode;
 
                     if (smtpClient.CheckMailboxExists(email, out resultCode))
@@ -95,17 +94,20 @@ namespace EmailValidator.NET
                                 result = EmailValidationResult.MailboxUnavailable;
                                 return true;
                         }
-
-                        //throw new EmailValidatorException("Unknown answer " + resultCode);
                     }
-
                 }
                 catch (SmtpClientException)
                 {
                 }
-                catch (ArgumentNullException )
+                catch (ArgumentNullException)
                 {
                 }
+            }
+
+            if (mxRecords.Count > 0)
+            {
+                result = EmailValidationResult.MailServerUnavailable;
+                return false;
             }
 
             result = EmailValidationResult.Undefined;

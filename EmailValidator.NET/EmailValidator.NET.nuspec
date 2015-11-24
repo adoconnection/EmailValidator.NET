@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>EmailValidator.NET</id>
+    <version>1.0.0</version>
+    <title>EmailValidator.NET</title>
+    <authors>Alexander Selishchev</authors>
+    <owners>Alexander Selishchev</owners>
+    <licenseUrl>https://github.com/adoconnection/EmailValidator.NET/blob/master/LICENSE.md</licenseUrl>
+    <projectUrl>https://github.com/adoconnection/EmailValidator.NET</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>C# SMTP and format email validator</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2015</copyright>
+    <tags>Email Validation SMTP</tags>
+  </metadata>
+</package>
