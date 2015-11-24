@@ -55,9 +55,13 @@ namespace EmailValidator.NET
                     return true;
                 }
             }
+            catch (IOException e)
+            {
+                // StreamReader problem
+            }
             catch (SocketException e)
             {
-                
+                // TcpClient problem
             }
 
             result = SmtpStatusCode.GeneralFailure;

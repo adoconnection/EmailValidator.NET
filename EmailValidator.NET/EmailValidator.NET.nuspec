@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>EmailValidator.NET</id>
-    <version>1.0.1</version>
+    <version>1.0.3</version>
     <title>EmailValidator.NET</title>
     <authors>Alexander Selishchev</authors>
     <owners>Alexander Selishchev</owners>

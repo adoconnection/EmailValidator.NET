@@ -60,7 +60,9 @@
     <Compile Include="SmtpClientTimeoutException.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="EmailValidator.NET.nuspec" />
+    <None Include="EmailValidator.NET.nuspec">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
