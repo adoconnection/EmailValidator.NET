@@ -1,6 +1,12 @@
 # EmailValidator.NET
 C# SMTP and format email validator
 
+NuGet:
+```
+Install-Package EmailValidator.NET
+```
+
+
 Example:
 
 ```
