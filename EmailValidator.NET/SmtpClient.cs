@@ -28,8 +28,16 @@ namespace EmailValidator.NET
         {
             try
             {
-                using (TcpClient tcpClient = new TcpClient(this.host, this.port))
+                using (TcpClient tcpClient = new TcpClient())
                 {
+                    tcpClient.SendTimeout = 1000;
+                    tcpClient.ReceiveTimeout = 1000;
+
+                    if (!tcpClient.ConnectAsync(this.host, this.port).Wait(1000))
+                    {
+                        throw new SmtpClientTimeoutException();
+                    }
+
                     NetworkStream networkStream = tcpClient.GetStream();
                     StreamReader streamReader = new StreamReader(networkStream);
 
@@ -40,7 +48,7 @@ namespace EmailValidator.NET
                     this.SendCommand(networkStream, streamReader, "HELO " + mailHost, SmtpStatusCode.Ok);
                     this.SendCommand(networkStream, streamReader, "MAIL FROM:<check@" + mailHost + ">", SmtpStatusCode.Ok);
                     SmtpResponse response = this.SendCommand(networkStream, streamReader, "RCPT TO:<" + email + ">");
-                    this.SendCommand(networkStream, streamReader, "QUIT", SmtpStatusCode.ServiceClosingTransmissionChannel);
+                    this.SendCommand(networkStream, streamReader, "QUIT", SmtpStatusCode.ServiceClosingTransmissionChannel, SmtpStatusCode.MailboxUnavailable);
 
                     result = response.Code;
 

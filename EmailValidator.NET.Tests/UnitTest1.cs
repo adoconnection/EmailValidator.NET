@@ -41,7 +41,6 @@ namespace EmailValidator.NET.Tests
             {
                 "mail@zelbike1.ru",
                 "adoconnection@gmail4411.com",
-                "adoconnection@yndx.ru",
                 "mail@по-кружке.рф",
             };
 
@@ -55,6 +54,29 @@ namespace EmailValidator.NET.Tests
                 }
 
                 Assert.AreEqual(EmailValidationResult.NoMailForDomain, result, email);
+            }
+        }
+
+        [TestMethod]
+        public void TestUnableToTest()
+        {
+            EmailValidator emailValidator = new EmailValidator();
+
+            IList<string> emails = new List<string>()
+            {
+                "adoconnection@yndx.ru",
+            };
+
+            foreach (string email in emails)
+            {
+                EmailValidationResult result;
+
+                if (emailValidator.Validate(email, out result))
+                {
+                    Assert.Fail("Actually was able to test :) " + email);
+                }
+
+                Assert.AreEqual(EmailValidationResult.MailServerUnavailable, result, email);
             }
         }
 
