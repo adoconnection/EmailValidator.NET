@@ -1,18 +1,18 @@
 # EmailValidator.NET
 C# SMTP and format email validator
 
+NuGet:
+```
+Install-Package EmailValidator.NET
+```
+
 Note, that there is no boadly suppord way to check email existance, so this validator should be used for reference only.
 Works with:
 * gmail.com
 * yandex.ru
 
 Not working:
-rambler.ru
-
-NuGet:
-```
-Install-Package EmailValidator.NET
-```
+* rambler.ru
 
 
 Example:
