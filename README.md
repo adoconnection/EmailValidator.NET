@@ -1,6 +1,14 @@
 # EmailValidator.NET
 C# SMTP and format email validator
 
+Note, that there is no boadly suppord way to check email existance, so this validator should be used for reference only.
+Works with:
+* gmail.com
+* yandex.ru
+
+Not working:
+rambler.ru
+
 NuGet:
 ```
 Install-Package EmailValidator.NET
@@ -39,3 +47,7 @@ switch (result)
 
 
 ```
+
+Drawbacks:
+* some SMPT servers always reply email is good, however when you send final command, it turns out it is not
+* some SMTP servers reply in a specific manner, delaing replies, so it seems like email is not exists
