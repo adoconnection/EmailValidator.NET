@@ -17,7 +17,7 @@ Not working:
 
 Example:
 
-```
+```cs
 EmailValidator emailValidator = new EmailValidator();
 EmailValidationResult result;
 
