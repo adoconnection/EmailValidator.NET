@@ -11,10 +11,6 @@ Works with:
 * gmail.com
 * yandex.ru
 
-Not working:
-* rambler.ru
-
-
 Example:
 
 ```cs
