@@ -1,17 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmailValidator.NET", "EmailValidator.NET\EmailValidator.NET.csproj", "{18A91A53-6932-4AD8-88F3-DD128DC20EEF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmailValidator.NET", "EmailValidator.NET\EmailValidator.NET.csproj", "{D6A7FA01-CC3E-401C-BF44-6F28258DA562}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmailValidator.NET.Tests", "EmailValidator.NET.Tests\EmailValidator.NET.Tests.csproj", "{4DC12498-642F-4CA3-9824-1EC8FAB2AE49}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0EC0832C-6DBE-40B7-AF80-CC3318716A06}"
-	ProjectSection(SolutionItems) = preProject
-		.gitignore = .gitignore
-		README.md = README.md
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +13,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{18A91A53-6932-4AD8-88F3-DD128DC20EEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{18A91A53-6932-4AD8-88F3-DD128DC20EEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{18A91A53-6932-4AD8-88F3-DD128DC20EEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{18A91A53-6932-4AD8-88F3-DD128DC20EEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6A7FA01-CC3E-401C-BF44-6F28258DA562}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6A7FA01-CC3E-401C-BF44-6F28258DA562}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6A7FA01-CC3E-401C-BF44-6F28258DA562}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6A7FA01-CC3E-401C-BF44-6F28258DA562}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4DC12498-642F-4CA3-9824-1EC8FAB2AE49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4DC12498-642F-4CA3-9824-1EC8FAB2AE49}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4DC12498-642F-4CA3-9824-1EC8FAB2AE49}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -30,5 +24,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4F216110-C9B8-4AC0-86A1-747C2697026F}
 	EndGlobalSection
 EndGlobal
