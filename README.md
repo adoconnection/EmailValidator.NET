@@ -1,6 +1,10 @@
 # EmailValidator.NET
 C# SMTP and format email validator
 
+[![NuGet](https://img.shields.io/nuget/dt/EmailValidator.NET.svg?style=flat-square)](https://www.nuget.org/packages/EmailValidator.NET)
+[![NuGet](https://img.shields.io/nuget/v/EmailValidator.NET.svg?style=flat-square)](https://www.nuget.org/packages/EmailValidator.NET)
+
+
 NuGet:
 ```
 Install-Package EmailValidator.NET
