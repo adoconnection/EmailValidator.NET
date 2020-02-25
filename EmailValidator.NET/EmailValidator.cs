@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Net.Mail;
-using System.Net.Sockets;
-using System.Text;
-using System.Threading.Tasks;
-using ARSoft.Tools.Net;
-using ARSoft.Tools.Net.Dns;
+using DnsClient;
+using DnsClient.Protocol;
 
 namespace EmailValidator.NET
 {
@@ -60,10 +55,9 @@ namespace EmailValidator.NET
 
             //////////////////
 
-            DomainName domainName = DomainName.Parse(mailAddress.Host);
-            DnsMessage dnsResponse = DnsClient.Default.Resolve(domainName, RecordType.Mx);
+            LookupClient dnsClient = new LookupClient() { UseTcpOnly = true };
 
-            IList<MxRecord> mxRecords = dnsResponse.AnswerRecords.OfType<MxRecord>().ToList();
+            var mxRecords = dnsClient.Query(mailAddress.Host, QueryType.MX).AllRecords.MxRecords().ToList();
 
             if (mxRecords.Count == 0)
             {
@@ -75,7 +69,7 @@ namespace EmailValidator.NET
             {
                 try
                 {
-                    SmtpClient smtpClient = new SmtpClient(mxRecord.ExchangeDomainName.ToString());
+                    SmtpClient smtpClient = new SmtpClient(mxRecord.Exchange.Value);
                     SmtpStatusCode resultCode;
 
                     if (smtpClient.CheckMailboxExists(email, out resultCode))
