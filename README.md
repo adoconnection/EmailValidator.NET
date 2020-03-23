@@ -50,5 +50,5 @@ switch (result)
 ```
 
 Drawbacks:
-* some SMTP servers always reply email is good, however when you send final command, it turns out it is not
+* some SMTP servers always reply email is good, however when you send email, it turns out it is not
 * some SMTP servers reply in a specific manner, delaing replies, so it seems like email is not exists
